@@ -1,25 +1,26 @@
+// packages
 import React from 'react';
-import logo from './logo.svg';
+import GoogleMapReact from 'google-map-react';
+
+// css
 import './App.css';
+
+// components
+// import Map from './Components/Map';
+
+const envKey: string = (process.env.REACT_APP_MAP_KEY as string)
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div style={{ height: '100vh', width: '100%' }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: envKey }}
+          defaultCenter={{lat: 59.95,
+      lng: 30.33}}
+          defaultZoom={11}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+        </GoogleMapReact>
+      </div>
   );
 }
 
