@@ -1,15 +1,12 @@
 // packages
-import { Map, GoogleApiWrapper } from "google-maps-react";
 import React from "react";
 
 // css
 
-
-components
+ // components
 import MapContainer from './Components/MapContainer';
 
 const envKey: any = process.env.REACT_APP_MAP_KEY;
-
 
 const App: React.FC = () => {
   return (

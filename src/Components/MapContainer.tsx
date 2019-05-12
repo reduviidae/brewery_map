@@ -1,18 +1,16 @@
 // packages
-import React, { Component } from "react";
+import React from "react";
 import { Map, GoogleApiWrapper } from "google-maps-react";
 
+require('dotenv').config()
 
-
-
-const envKey: any = process.env.REACT_APP_MAP_KEY;
-
+const envKey: string = process.env.REACT_APP_MAP_KEY as string;
 
 const MapContainer: React.FC = (props: any) => {
   return (
     <Map
       google={props.google}
-      zoom={14}
+      zoom={16}
       initialCenter={{
         lat: 40.64642,
         lng: -73.95999
