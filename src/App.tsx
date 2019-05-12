@@ -1,16 +1,19 @@
 // packages
 import React from "react";
 
-// css
+// style
+import "./App.scss";
 
- // components
-import MapContainer from './Components/MapContainer';
-
-const envKey: any = process.env.REACT_APP_MAP_KEY;
+// components
+import NavBar from "./Components/NavBar";
+import MapContainer from "./Components/MapContainer";
 
 const App: React.FC = () => {
   return (
-    <MapContainer/>
+    <div className="mapContainer">
+      <NavBar />
+      <MapContainer />
+    </div>
   );
 };
 

@@ -6,10 +6,16 @@ require('dotenv').config()
 
 const envKey: string = process.env.REACT_APP_MAP_KEY as string;
 
+const style: any = {
+  height: '20%',
+  width: '20%'
+}
+
 const MapContainer: React.FC = (props: any) => {
   return (
     <Map
       google={props.google}
+      style={style}
       zoom={16}
       initialCenter={{
         lat: 40.64642,
