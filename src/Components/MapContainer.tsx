@@ -2,8 +2,6 @@
 import React from "react";
 import { Map, GoogleApiWrapper } from "google-maps-react";
 
-require('dotenv').config()
-
 const envKey: string = process.env.REACT_APP_MAP_KEY as string;
 
 const style: any = {
